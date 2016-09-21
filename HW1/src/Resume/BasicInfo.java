@@ -5,6 +5,8 @@
  */
 package Resume;
 
+import javax.swing.Icon;
+
 /**
  *
  * @author leslie
@@ -19,6 +21,7 @@ public class BasicInfo {
     private String streetLine2;
     private String city;
     private String country;
+    private Icon photo;
 
     public String getFirstName() {
         return firstName;
@@ -82,6 +85,14 @@ public class BasicInfo {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public Icon getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(Icon photo) {
+        this.photo = photo;
     }
     
     

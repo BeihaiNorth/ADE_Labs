@@ -21,6 +21,7 @@ public class DisplayPanel extends javax.swing.JPanel {
     public DisplayPanel(BasicInfo basicInfo, Education education, ProjectsandInternship projectsandInternship1,ProjectsandInternship projectsandInternship2, CareerObjStatement careerObjStatement, AdditionalInfo additionalInfo) {
         initComponents();
         display(basicInfo,  education,  projectsandInternship1, projectsandInternship2,  careerObjStatement, additionalInfo);
+        
     }
     
     private Void display(BasicInfo basicInfo, Education education, ProjectsandInternship projectsandInternship1,ProjectsandInternship projectsandInternship2, CareerObjStatement careerObjStatement, AdditionalInfo additionalInfo) {
@@ -41,6 +42,10 @@ public class DisplayPanel extends javax.swing.JPanel {
         cityTextField.setText(bcity);
         String bcountry = basicInfo.getCountry();
         countryTextField.setText(bcountry);
+        
+        
+        //display photo
+        photoTagField.setIcon(basicInfo.getPhoto());
         
         String ename = education.getCollegeName();
         collegeNameTextField.setText(ename);
@@ -68,13 +73,13 @@ public class DisplayPanel extends javax.swing.JPanel {
         pj1DateToYTextField.setText(p1dty);
         
         String p2dfm = projectsandInternship2.getDateFromM();
-        pj1DateFromMTextField.setText(p2dfm);
+        pj2DateFromMTextField1.setText(p2dfm);
         String p2dfy = projectsandInternship2.getDateFromY();
-        pj1DateFromYTextField.setText(p2dfy);
+        pj2DateFromYTextField1.setText(p2dfy);
         String p2dtm = projectsandInternship2.getDateToM();
-        pj1DateToMTextField.setText(p2dtm);
+        pj2DateToMTextField1.setText(p2dtm);
         String p2dty = projectsandInternship2.getDateToY();
-        pj1DateToYTextField.setText(p2dty);
+        pj2DateToYTextField1.setText(p2dty);
         
         String p1des = projectsandInternship1.getDesctription();
         pj1TextArea.setText(p1des);
@@ -108,7 +113,6 @@ public class DisplayPanel extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jLabel18 = new javax.swing.JLabel();
         pj1DateFromMTextField = new javax.swing.JTextField();
@@ -161,13 +165,14 @@ public class DisplayPanel extends javax.swing.JPanel {
         affiliationTextField = new javax.swing.JTextField();
         photoTagField = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(248, 248, 248));
+        setBackground(new java.awt.Color(240, 247, 237));
 
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel18.setText("PROJECTS AND INTERNSHIPS");
 
-        pj1DateFromMTextField.setText("08");
-        pj1DateFromMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj1DateFromMTextField.setBackground(new java.awt.Color(240, 247, 237));
+        pj1DateFromMTextField.setText("mm");
+        pj1DateFromMTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pj1DateFromMTextField.setFocusTraversalKeysEnabled(false);
         pj1DateFromMTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,8 +180,9 @@ public class DisplayPanel extends javax.swing.JPanel {
             }
         });
 
-        pj1DateToMTextField.setText("09");
-        pj1DateToMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj1DateToMTextField.setBackground(new java.awt.Color(240, 247, 237));
+        pj1DateToMTextField.setText("mm");
+        pj1DateToMTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pj1DateToMTextField.setFocusTraversalKeysEnabled(false);
         pj1DateToMTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,8 +190,9 @@ public class DisplayPanel extends javax.swing.JPanel {
             }
         });
 
-        pj1DateFromYTextField.setText("2013");
-        pj1DateFromYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj1DateFromYTextField.setBackground(new java.awt.Color(240, 247, 237));
+        pj1DateFromYTextField.setText("yyyy");
+        pj1DateFromYTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pj1DateFromYTextField.setFocusTraversalKeysEnabled(false);
         pj1DateFromYTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -193,8 +200,9 @@ public class DisplayPanel extends javax.swing.JPanel {
             }
         });
 
-        pj1DateToYTextField.setText("2013");
-        pj1DateToYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj1DateToYTextField.setBackground(new java.awt.Color(240, 247, 237));
+        pj1DateToYTextField.setText("yyyy");
+        pj1DateToYTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pj1DateToYTextField.setFocusTraversalKeysEnabled(false);
 
         jLabel20.setText("/");
@@ -204,28 +212,49 @@ public class DisplayPanel extends javax.swing.JPanel {
         pj1TextArea.setColumns(20);
         pj1TextArea.setRows(5);
         jScrollPane1.setViewportView(pj1TextArea);
+        pj1TextArea.setLineWrap(true);
+        pj1TextArea.setWrapStyleWord(true);
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel11.setText("EDUCATION ");
 
         jLabel14.setText("~");
 
-        collegeNameTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        collegeNameTextField.setBackground(new java.awt.Color(240, 247, 237));
+        collegeNameTextField.setText("College Name");
+        collegeNameTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         pj2TextArea.setColumns(20);
         pj2TextArea.setRows(5);
         jScrollPane2.setViewportView(pj2TextArea);
+        pj1TextArea.setLineWrap(true);
+        pj1TextArea.setWrapStyleWord(true);
 
-        specialtyTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        specialtyTextField.setBackground(new java.awt.Color(240, 247, 237));
+        specialtyTextField.setText("Specialty");
+        specialtyTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        specialtyTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                specialtyTextFieldActionPerformed(evt);
+            }
+        });
 
-        gpaTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        gpaTextField.setBackground(new java.awt.Color(240, 247, 237));
+        gpaTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        eduDateFromMTextField.setText("12");
-        eduDateFromMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        eduDateFromMTextField.setBackground(new java.awt.Color(240, 247, 237));
+        eduDateFromMTextField.setText("mm");
+        eduDateFromMTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         eduDateFromMTextField.setFocusTraversalKeysEnabled(false);
+        eduDateFromMTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eduDateFromMTextFieldActionPerformed(evt);
+            }
+        });
 
-        eduDateToMTextField.setText("12");
-        eduDateToMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        eduDateToMTextField.setBackground(new java.awt.Color(240, 247, 237));
+        eduDateToMTextField.setText("mm");
+        eduDateToMTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         eduDateToMTextField.setFocusTraversalKeysEnabled(false);
         eduDateToMTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,8 +262,9 @@ public class DisplayPanel extends javax.swing.JPanel {
             }
         });
 
-        eduDateFromYTextField.setText("1888");
-        eduDateFromYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        eduDateFromYTextField.setBackground(new java.awt.Color(240, 247, 237));
+        eduDateFromYTextField.setText("yyyy");
+        eduDateFromYTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         eduDateFromYTextField.setFocusTraversalKeysEnabled(false);
         eduDateFromYTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,8 +272,9 @@ public class DisplayPanel extends javax.swing.JPanel {
             }
         });
 
-        eduDateToYTextField.setText("1998");
-        eduDateToYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        eduDateToYTextField.setBackground(new java.awt.Color(240, 247, 237));
+        eduDateToYTextField.setText("yyyy");
+        eduDateToYTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         eduDateToYTextField.setFocusTraversalKeysEnabled(false);
 
         jLabel28.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
@@ -252,20 +283,25 @@ public class DisplayPanel extends javax.swing.JPanel {
         objStatementTextArea.setColumns(20);
         objStatementTextArea.setRows(5);
         jScrollPane3.setViewportView(objStatementTextArea);
+        pj1TextArea.setLineWrap(true);
+        pj1TextArea.setWrapStyleWord(true);
 
         jLabel30.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel30.setText("ADDITIONAL INFORMATION");
 
-        languagesTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        languagesTextField.setBackground(new java.awt.Color(240, 247, 237));
+        languagesTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        certificatesTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        certificatesTextField.setBackground(new java.awt.Color(240, 247, 237));
+        certificatesTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         certificatesTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 certificatesTextFieldActionPerformed(evt);
             }
         });
 
-        hobbiesTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        hobbiesTextField.setBackground(new java.awt.Color(240, 247, 237));
+        hobbiesTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         jLabel33.setText("Hobbies:");
 
@@ -281,16 +317,19 @@ public class DisplayPanel extends javax.swing.JPanel {
 
         jLabel34.setText("/");
 
+        pj2DateFromMTextField1.setBackground(new java.awt.Color(240, 247, 237));
         pj2DateFromMTextField1.setText("mm");
-        pj2DateFromMTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj2DateFromMTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pj2DateFromMTextField1.setFocusTraversalKeysEnabled(false);
 
+        pj2DateToMTextField1.setBackground(new java.awt.Color(240, 247, 237));
         pj2DateToMTextField1.setText("mm");
-        pj2DateToMTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj2DateToMTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pj2DateToMTextField1.setFocusTraversalKeysEnabled(false);
 
+        pj2DateFromYTextField1.setBackground(new java.awt.Color(240, 247, 237));
         pj2DateFromYTextField1.setText("yyyy");
-        pj2DateFromYTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj2DateFromYTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pj2DateFromYTextField1.setFocusTraversalKeysEnabled(false);
         pj2DateFromYTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -298,8 +337,9 @@ public class DisplayPanel extends javax.swing.JPanel {
             }
         });
 
+        pj2DateToYTextField1.setBackground(new java.awt.Color(240, 247, 237));
         pj2DateToYTextField1.setText("yyyy");
-        pj2DateToYTextField1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj2DateToYTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         pj2DateToYTextField1.setFocusTraversalKeysEnabled(false);
 
         jLabel35.setText("/");
@@ -308,30 +348,39 @@ public class DisplayPanel extends javax.swing.JPanel {
 
         jLabel37.setText("~");
 
-        fNameTextField.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        fNameTextField.setFont(new java.awt.Font("Savoye LET", 1, 36)); // NOI18N
         fNameTextField.setText("fname");
 
-        lNameTextField.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        lNameTextField.setFont(new java.awt.Font("Savoye LET", 1, 36)); // NOI18N
         lNameTextField.setText("lname");
 
-        streetln1TextField.setText("line1");
-        streetln1TextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        streetln1TextField.setBackground(new java.awt.Color(240, 247, 237));
+        streetln1TextField.setText("Street Line 1");
+        streetln1TextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         streetln1TextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 streetln1TextFieldActionPerformed(evt);
             }
         });
 
-        streetln2TextField.setText("line2");
-        streetln2TextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        streetln2TextField.setBackground(new java.awt.Color(240, 247, 237));
+        streetln2TextField.setText("Street Line 2");
+        streetln2TextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        cityTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        cityTextField.setBackground(new java.awt.Color(240, 247, 237));
+        cityTextField.setText("City");
+        cityTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        countryTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        countryTextField.setBackground(new java.awt.Color(240, 247, 237));
+        countryTextField.setText("Country");
+        countryTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        emailTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        emailTextField.setBackground(new java.awt.Color(240, 247, 237));
+        emailTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        affiliationTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        affiliationTextField.setBackground(new java.awt.Color(240, 247, 237));
+        affiliationTextField.setText("Affiliation");
+        affiliationTextField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         photoTagField.setText("photo");
 
@@ -348,7 +397,10 @@ public class DisplayPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel28)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel33)
@@ -362,6 +414,7 @@ public class DisplayPanel extends javax.swing.JPanel {
                                 .addComponent(jLabel31)
                                 .addGap(23, 23, 23)
                                 .addComponent(languagesTextField))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(pj1DateFromMTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
@@ -378,6 +431,24 @@ public class DisplayPanel extends javax.swing.JPanel {
                                 .addComponent(pj1DateToYTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(countryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(streetln2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(streetln1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(affiliationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(photoTagField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(pj2DateFromMTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
@@ -393,18 +464,11 @@ public class DisplayPanel extends javax.swing.JPanel {
                                 .addGap(0, 0, 0)
                                 .addComponent(pj2DateToYTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE))
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(26, 26, 26))
+                                .addComponent(jScrollPane2)))
+                        .addGap(24, 24, 24))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
-                            .addComponent(jLabel30)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(eduDateFromMTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
@@ -420,26 +484,14 @@ public class DisplayPanel extends javax.swing.JPanel {
                                 .addGap(0, 0, 0)
                                 .addComponent(eduDateToYTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(collegeNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(specialtyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(gpaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(collegeNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(specialtyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(countryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(streetln2TextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
-                                    .addComponent(emailTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(affiliationTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(streetln1TextField, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(18, 18, 18)
-                                .addComponent(photoTagField, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(jLabel3)
+                                .addGap(0, 0, 0)
+                                .addComponent(gpaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel30))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -449,20 +501,21 @@ public class DisplayPanel extends javax.swing.JPanel {
                     .addComponent(fNameTextField)
                     .addComponent(lNameTextField))
                 .addGap(18, 18, 18)
-                .addComponent(affiliationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(streetln1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(streetln2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(photoTagField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(countryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3)
-                .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(photoTagField, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(affiliationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(streetln1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(streetln2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(countryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -474,9 +527,9 @@ public class DisplayPanel extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(collegeNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(specialtyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(specialtyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(gpaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -484,33 +537,31 @@ public class DisplayPanel extends javax.swing.JPanel {
                 .addComponent(jLabel18)
                 .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel21)
-                            .addComponent(pj1DateFromMTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pj1DateToMTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pj1DateFromYTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pj1DateToYTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel34))
-                        .addGap(44, 44, 44)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel35)
-                            .addComponent(jLabel37)
-                            .addComponent(pj2DateFromMTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pj2DateToMTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pj2DateFromYTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pj2DateToYTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel36)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel20)
+                        .addComponent(jLabel21)
+                        .addComponent(pj1DateFromMTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pj1DateToMTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pj1DateFromYTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pj1DateToYTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel34))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel35)
+                        .addComponent(jLabel37)
+                        .addComponent(pj2DateFromMTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pj2DateToMTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pj2DateFromYTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(pj2DateToYTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel36))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
                 .addComponent(jLabel28)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addComponent(jLabel30)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -520,11 +571,11 @@ public class DisplayPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
                     .addComponent(certificatesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
                     .addComponent(hobbiesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -559,6 +610,14 @@ public class DisplayPanel extends javax.swing.JPanel {
     private void streetln1TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_streetln1TextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_streetln1TextFieldActionPerformed
+
+    private void eduDateFromMTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eduDateFromMTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eduDateFromMTextFieldActionPerformed
+
+    private void specialtyTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_specialtyTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_specialtyTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
