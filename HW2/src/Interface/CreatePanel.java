@@ -255,11 +255,16 @@ public class CreatePanel extends javax.swing.JPanel {
             }
         });
 
-        eduDateToMTextField.setText("03");
+        eduDateToMTextField.setText("02");
         eduDateToMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         eduDateToMTextField.setFocusTraversalKeysEnabled(false);
+        eduDateToMTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eduDateToMTextFieldActionPerformed(evt);
+            }
+        });
 
-        eduDateFromYTextField.setText("2013");
+        eduDateFromYTextField.setText("2000");
         eduDateFromYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         eduDateFromYTextField.setFocusTraversalKeysEnabled(false);
         eduDateFromYTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -268,22 +273,22 @@ public class CreatePanel extends javax.swing.JPanel {
             }
         });
 
-        eduDateToYTextField.setText("2014");
+        eduDateToYTextField.setText("2001");
         eduDateToYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         eduDateToYTextField.setFocusTraversalKeysEnabled(false);
 
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel18.setText("PROJECTS AND INTERNSHIPS");
 
-        pj1DateFromMTextField.setText("10");
+        pj1DateFromMTextField.setText("03");
         pj1DateFromMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pj1DateFromMTextField.setFocusTraversalKeysEnabled(false);
 
-        pj1DateToMTextField.setText("12");
+        pj1DateToMTextField.setText("04");
         pj1DateToMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pj1DateToMTextField.setFocusTraversalKeysEnabled(false);
 
-        pj1DateFromYTextField.setText("2014");
+        pj1DateFromYTextField.setText("2000");
         pj1DateFromYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pj1DateFromYTextField.setFocusTraversalKeysEnabled(false);
         pj1DateFromYTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -292,7 +297,7 @@ public class CreatePanel extends javax.swing.JPanel {
             }
         });
 
-        pj1DateToYTextField.setText("2014");
+        pj1DateToYTextField.setText("2001");
         pj1DateToYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pj1DateToYTextField.setFocusTraversalKeysEnabled(false);
 
@@ -310,13 +315,18 @@ public class CreatePanel extends javax.swing.JPanel {
         pj1TextArea.setLineWrap(true);
         pj1TextArea.setWrapStyleWord(true);
 
-        pj2DateFromMTextField.setText("03");
+        pj2DateFromMTextField.setText("05");
         pj2DateFromMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        pj2DateToMTextField.setText("02");
+        pj2DateToMTextField.setText("06");
         pj2DateToMTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pj2DateToMTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pj2DateToMTextFieldActionPerformed(evt);
+            }
+        });
 
-        pj2DateFromYTextField.setText("2015");
+        pj2DateFromYTextField.setText("2004");
         pj2DateFromYTextField.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         pj2DateFromYTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -521,7 +531,7 @@ public class CreatePanel extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -539,13 +549,29 @@ public class CreatePanel extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(collegeNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(specialtyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(gpaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addContainerGap(398, Short.MAX_VALUE))
+                                    .addComponent(specialtyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(gpaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(269, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(28, 28, 28)
+                                .addComponent(fNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel3)
+                                .addGap(18, 18, 18)
+                                .addComponent(lNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel1)
+                                .addGap(157, 157, 157)
+                                .addComponent(createBtn))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel23)
                                     .addComponent(jLabel26))
@@ -566,11 +592,11 @@ public class CreatePanel extends javax.swing.JPanel {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(jScrollPane2))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel29)
                                 .addGap(18, 18, 18)
                                 .addComponent(jScrollPane3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel32)
                                     .addComponent(jLabel31)
@@ -580,11 +606,11 @@ public class CreatePanel extends javax.swing.JPanel {
                                     .addComponent(hobbiesTextField)
                                     .addComponent(languagesTextField)
                                     .addComponent(certificatesTextField)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(fileNameTextField)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(chooseBtn))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel19)
                                     .addComponent(jLabel22))
@@ -605,7 +631,7 @@ public class CreatePanel extends javax.swing.JPanel {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(jScrollPane1))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addGap(71, 71, 71)
                                 .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -613,11 +639,11 @@ public class CreatePanel extends javax.swing.JPanel {
                                 .addComponent(jLabel8)
                                 .addGap(46, 46, 46)
                                 .addComponent(countryTextField))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(18, 18, 18)
                                 .addComponent(streetln2TextField))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
                                     .addComponent(jLabel5)
@@ -630,7 +656,7 @@ public class CreatePanel extends javax.swing.JPanel {
                                             .addComponent(phoneTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(affiliationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -664,7 +690,7 @@ public class CreatePanel extends javax.swing.JPanel {
                                                         .addComponent(jLabel14))
                                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                                         .addComponent(cplusCBox)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addGap(42, 42, 42)
                                                         .addComponent(cCBox)))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(eduDateToMTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -683,25 +709,7 @@ public class CreatePanel extends javax.swing.JPanel {
                                                     .addComponent(pythonCBox)
                                                     .addComponent(tcpCBox))))))
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(145, 145, 145)
-                        .addComponent(createBtn)
-                        .addGap(94, 94, 94))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(28, 28, 28)
-                                .addComponent(fNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(lNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(50, 50, 50))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -719,15 +727,16 @@ public class CreatePanel extends javax.swing.JPanel {
                     .addComponent(fNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(maleRBtn)
-                    .addComponent(femaleRBtn)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(maleRBtn, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(femaleRBtn, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel35))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel36)
-                    .addComponent(ctzRBtn)
-                    .addComponent(internationalRBtn))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(ctzRBtn)
+                        .addComponent(internationalRBtn)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel37)
@@ -758,11 +767,12 @@ public class CreatePanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cplusCBox)
-                    .addComponent(cCBox)
-                    .addComponent(javaCBox)
-                    .addComponent(pythonCBox))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cCBox)
+                        .addComponent(javaCBox)
+                        .addComponent(pythonCBox)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(phpCBox)
@@ -857,11 +867,11 @@ public class CreatePanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(createScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 773, Short.MAX_VALUE)
+            .addComponent(createScrollPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(createScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
+            .addComponent(createScrollPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 651, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -877,12 +887,8 @@ public class CreatePanel extends javax.swing.JPanel {
 
         Resume resume=resumeHistory.addResume();
         
-        //Create Basic Info
         resume.setFirstName(fNameTextField.getText());
         resume.setLastName(lNameTextField.getText());
-        resume.setGender(genderBtnGrp.getSelection().getActionCommand());
-        resume.setNationality(nationalityBtnGroup.getSelection().getActionCommand());
-        resume.setStatus(statusBtnGroup.getSelection().getActionCommand());
         resume.setPhone(phoneTextField.getText());
         resume.setAffiliation(affiliationTextField.getText());
         resume.setStreetLine1(streetln1TextField.getText());
@@ -890,7 +896,58 @@ public class CreatePanel extends javax.swing.JPanel {
         resume.setCity(cityTextField.getText());
         resume.setCountry(countryTextField.getText());
         
+        //Create Education Info
+        resume.setCollegeName(collegeNameTextField.getText());
+        String eduFromM = eduDateFromMTextField.getText();
+        resume.setEduDateFromM(eduFromM);
+        String eduFromY = eduDateFromYTextField.getText();
+        resume.setEduDateFromY(eduFromY);
+        String eduToM = eduDateToMTextField.getText();
+        resume.setEduDateToM(eduToM);
+        String eduToY = eduDateToYTextField.getText();
+        resume.setEduDateToY(eduToY);
+        resume.setSpecialty(specialtyTextField.getText());
+        resume.setGpa(gpaTextField.getText());
+        
+        //Create Projects and Internship Info
+        resume.setPNIDateFromM1(pj1DateFromMTextField.getText());//setPNIdateFromM1
+        resume.setPNIDateFromY1(pj1DateFromYTextField.getText());
+        resume.setPNIDateToM1(pj1DateToMTextField.getText());
+        resume.setPNIDateToY1(pj1DateToYTextField.getText());
+        resume.setDesctription1(pj1TextArea.getText());
+        resume.setPNIDateFromM2(pj2DateFromMTextField.getText());
+        resume.setPNIDateFromY2(pj2DateFromYTextField.getText());
+        resume.setPNIDateToM2(pj2DateToMTextField.getText());
+        resume.setPNIDateToY2(pj2DateToYTextField.getText());
+        resume.setDesctription2(pj2TextArea.getText());
+
+        //Create Career Objective Statement
+        resume.setDescription(objStatementTextArea.getText());
+
+        //Create additioanl info
+        resume.setLanguages(languagesTextField.getText());
+        resume.setCertificates(certificatesTextField.getText());
+        resume.setHobbies(hobbiesTextField.getText());
+        
+        
+       try {
+           resume.setGender(genderBtnGrp.getSelection().getActionCommand());
+       }catch (NullPointerException e){
+            System.out.println("Unfinished blanks.");
+                }
+       try{
+        resume.setNationality(nationalityBtnGroup.getSelection().getActionCommand());
+        }catch (NullPointerException e){
+            System.out.println("Unfinished blanks.");
+                }
+       try{
+        resume.setStatus(statusBtnGroup.getSelection().getActionCommand());
+        }catch (NullPointerException e){
+            System.out.println("Unfinished blanks.");
+                }
+        
         //Create Tech Skilss
+        try{
         String skill ="";
             if (!(cCBox.isSelected()
                     ||cplusCBox.isSelected()
@@ -927,50 +984,17 @@ public class CreatePanel extends javax.swing.JPanel {
                 skill += "  " +tcpCBox.getActionCommand();
             }
         resume.setTechSkills(skill);
-
-        //Create photo
-        pht1.setImage(pht1.getImage().getScaledInstance(121, 121, Image.SCALE_DEFAULT));
-        resume.setPhoto(pht1);
-
-        //Create Education Info
-        resume.setCollegeName(collegeNameTextField.getText());
-        String eduFromM = eduDateFromMTextField.getText();
-        resume.setEduDateFromM(eduFromM);
-        String eduFromY = eduDateFromYTextField.getText();
-        resume.setEduDateFromY(eduFromY);
-        String eduToM = eduDateToMTextField.getText();
-        resume.setEduDateToM(eduToM);
-        String eduToY = eduDateToYTextField.getText();
-        resume.setEduDateToY(eduToY);
-        resume.setSpecialty(specialtyTextField.getText());
-        resume.setGpa(gpaTextField.getText());
-        
-        
-        
-        //Create Projects and Internship Info
-        resume.setPNIDateFromM1(pj1DateFromMTextField.getText());//setPNIdateFromM1
-        resume.setPNIDateFromY1(pj1DateFromYTextField.getText());
-        resume.setPNIDateToM1(pj1DateToMTextField.getText());
-        resume.setPNIDateToY1(pj1DateToYTextField.getText());
-        resume.setDesctription1(pj1TextArea.getText());
-        resume.setPNIDateFromM2(pj2DateFromMTextField.getText());
-        resume.setPNIDateFromY2(pj2DateFromYTextField.getText());
-        resume.setPNIDateToM2(pj2DateToMTextField.getText());
-        resume.setPNIDateToY2(pj2DateToYTextField.getText());
-        resume.setDesctription2(pj2TextArea.getText());
-
-        //Create Career Objective Statement
-        resume.setDescription(objStatementTextArea.getText());
-
-        //Create additioanl info
-        resume.setLanguages(languagesTextField.getText());
-        resume.setCertificates(certificatesTextField.getText());
-        resume.setHobbies(hobbiesTextField.getText());
-        
+        }catch (NullPointerException e){
+            System.out.println("Unfinished blanks.");
+                }
         
         //Create photo
-        pht1.setImage(pht1.getImage().getScaledInstance(121, 121, Image.SCALE_DEFAULT));
-        resume.setPhoto(pht1);
+        try{
+            pht1.setImage(pht1.getImage().getScaledInstance(121, 121, Image.SCALE_DEFAULT));
+            resume.setPhoto(pht1);
+        }catch (NullPointerException e){
+            System.out.println("Unfinished blanks.");
+                }
         
         JOptionPane.showMessageDialog(null, "Product created successfully.");
         
@@ -1114,6 +1138,14 @@ public class CreatePanel extends javax.swing.JPanel {
     private void tcpCBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tcpCBoxActionPerformed
         tcpCBox.setActionCommand("TCP/TP");
     }//GEN-LAST:event_tcpCBoxActionPerformed
+
+    private void eduDateToMTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eduDateToMTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_eduDateToMTextFieldActionPerformed
+
+    private void pj2DateToMTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pj2DateToMTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pj2DateToMTextFieldActionPerformed
 
     
 

@@ -29,12 +29,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="createScrollPane" alignment="0" pref="773" max="32767" attributes="0"/>
+          <Component id="createScrollPane" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="createScrollPane" alignment="0" pref="850" max="32767" attributes="0"/>
+          <Component id="createScrollPane" alignment="1" min="-2" pref="651" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -62,7 +62,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -81,17 +81,36 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="collegeNameTextField" min="-2" pref="257" max="-2" attributes="0"/>
-                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                              <Component id="specialtyTextField" alignment="0" min="-2" pref="257" max="-2" attributes="0"/>
-                                              <Component id="gpaTextField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="specialtyTextField" alignment="0" min="-2" pref="257" max="-2" attributes="0"/>
+                                          <Component id="gpaTextField" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="398" max="32767" attributes="0"/>
+                              <EmptySpace pref="269" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="fNameTextField" min="-2" pref="135" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lNameTextField" min="-2" pref="145" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
+                                      <Component id="createBtn" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel23" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -199,7 +218,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -238,7 +257,7 @@
                                                           </Group>
                                                           <Group type="102" attributes="0">
                                                               <Component id="cplusCBox" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace max="32767" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                                                               <Component id="cCBox" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
@@ -268,29 +287,7 @@
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
-                              <Component id="createBtn" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="fNameTextField" min="-2" pref="135" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="lNameTextField" min="-2" pref="145" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -314,16 +311,18 @@
                           <Component id="lNameTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="maleRBtn" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="femaleRBtn" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="ctzRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="internationalRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="ctzRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="internationalRBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -361,11 +360,13 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="cplusCBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="cCBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="javaCBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="pythonCBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="cCBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="javaCBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="pythonCBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -681,7 +682,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="eduDateToMTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="03"/>
+                <Property name="text" type="java.lang.String" value="02"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -689,10 +690,13 @@
                 </Property>
                 <Property name="focusTraversalKeysEnabled" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eduDateToMTextFieldActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="eduDateFromYTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="2013"/>
+                <Property name="text" type="java.lang.String" value="2000"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -706,7 +710,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="eduDateToYTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="2014"/>
+                <Property name="text" type="java.lang.String" value="2001"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -725,7 +729,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="pj1DateFromMTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="10"/>
+                <Property name="text" type="java.lang.String" value="03"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -736,7 +740,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="pj1DateToMTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="12"/>
+                <Property name="text" type="java.lang.String" value="04"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -747,7 +751,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="pj1DateFromYTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="2014"/>
+                <Property name="text" type="java.lang.String" value="2000"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -761,7 +765,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="pj1DateToYTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="2014"/>
+                <Property name="text" type="java.lang.String" value="2001"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -810,7 +814,7 @@
             </Container>
             <Component class="javax.swing.JTextField" name="pj2DateFromMTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="03"/>
+                <Property name="text" type="java.lang.String" value="05"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
@@ -820,17 +824,20 @@
             </Component>
             <Component class="javax.swing.JTextField" name="pj2DateToMTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="02"/>
+                <Property name="text" type="java.lang.String" value="06"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
                   </Border>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pj2DateToMTextFieldActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="pj2DateFromYTextField">
               <Properties>
-                <Property name="text" type="java.lang.String" value="2015"/>
+                <Property name="text" type="java.lang.String" value="2004"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                     <EtchetBorder/>
