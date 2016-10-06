@@ -5,6 +5,8 @@
  */
 package Interface;
 
+import Interface.vendorRole.VendorIdentifyJPanel;
+import Interface.costumerRole.ChooseCategoryJPanel;
 import Business.ProductDirectory;
 import java.awt.CardLayout;
 
@@ -19,7 +21,7 @@ public class MainJFrame extends javax.swing.JFrame {
     
     public MainJFrame() {
         initComponents();
-        this.productDirectory = new ProductDirectory();
+        productDirectory = new ProductDirectory();
     }
 
     /**

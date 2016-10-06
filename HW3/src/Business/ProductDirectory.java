@@ -53,8 +53,8 @@ public class ProductDirectory {
         return product;
     }
     
-    public void deleteProduct(){
-        
+    public void deleteProduct(Product product){
+        productDirectory.remove(product);
     }
 
     

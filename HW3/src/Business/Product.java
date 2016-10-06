@@ -98,7 +98,10 @@ public class Product {
         this.features = new ArrayList<String>(Arrays.asList(featureStrArray));
     }
 
-    
+    @Override
+    public String toString(){
+        return name;
+    }
     
     
 }
